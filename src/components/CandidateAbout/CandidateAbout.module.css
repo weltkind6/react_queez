@@ -1,0 +1,11 @@
+import React from 'react';
+
+const CandidateAbout = () => {
+    return (
+        <div>
+            
+        </div>
+    );
+};
+
+export default CandidateAbout;
