@@ -1,0 +1,129 @@
+.wrapper {
+    margin: 15px 0 15px 0;
+}
+
+.totalScore {
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    margin-left: 5px;
+}
+
+.triangle {
+
+}
+
+.points {
+    font-weight: 500;
+}
+.scoreBlock {
+
+}
+.scoresPoints {
+    text-align: center;
+}
+.cards {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+.indicators {
+    display: flex;
+    flex-direction: column;
+}
+
+.item {
+    padding: .5em;
+    margin: 8px;
+    max-width: 200px;
+    width: 100%;
+    text-transform: uppercase;
+    text-align: center;
+    color: #FFFFFF;
+    font-weight: 400;
+    border-radius: 5px;
+}
+
+.item:first-child {
+    background-color: #06bcfb;
+    background-image: linear-gradient(315deg, #06bcfb 0%, #4884ee 74%);
+}
+.item:nth-child(2) {
+    background-color: #05e8ba;
+    background-image: linear-gradient(315deg, #05e8ba 0%, #087ee1 74%);
+
+}
+.item:nth-child(3) {
+    background-color: #63a4ff;
+    background-image: linear-gradient(315deg, #63a4ff 0%, #83eaf1 74%);
+}
+.item:nth-child(4) {
+    background-color: #52a7c1;
+    background-image: linear-gradient(315deg, #52a7c1 0%, #b3f6d8 74%);
+}
+.item:nth-child(5) {
+    background-color: #0499f2;
+    background-image: linear-gradient(315deg, #0499f2 0%, #26f596 74%);
+}
+
+@media (min-width: 1200px) {
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .totalScore {
+        font-size: 125px;
+        height: 150px;
+    }
+    .points {
+        text-align: center;
+        font-size: 27px;
+    }
+    .scoresPoints {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+    }
+    .cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+    }
+    .triangle {
+        transform: rotate(180deg);
+        margin-left: 585px;
+    }
+    .indicators {
+        display: flex;
+        flex-direction: row;
+        margin: 0 5px;
+    }
+    .item {
+        width: 150px;
+        margin: 8px 4px;
+    }
+    .indicators > span:first-child {
+        margin-right: 118px;
+    }
+    .indicators > span:nth-child(2) {
+        margin-right: 133px;
+    }
+    .indicators > span:nth-child(3) {
+        margin-right: 131px;
+    }
+    .indicators > span:nth-child(4) {
+        margin-right: 135px;
+    }
+    .indicators > span:nth-child(5) {
+        margin-right: 110px;
+    }
+}
+
+
+
+
+
+
+

@@ -1,0 +1,20 @@
+import React from 'react';
+import {Button} from "reactstrap";
+import Title from "../ui/TItle/Title";
+
+const Question1 = () => {
+    return (
+        <div>
+            <Title children="Вопрос 1"/>
+            Есть ли у вас определенные стандарты вежливого и учтивого поведения с членами вашей семьи?
+            <div className={styles.buttonsBlock}>
+                <Button color="primary" outline>Да</Button>
+                <Button color="primary" outline>Может быть</Button>
+                <Button color="primary" outline>Нет</Button>
+            </div>
+            <div>1 из 200</div>
+        </div>
+    );
+};
+
+export default Question1;
