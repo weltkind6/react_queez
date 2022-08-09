@@ -1,22 +1,15 @@
-import styles from './Title.module.css'
-import {FC, ReactNode} from 'react';
+import React from 'react';
 import classNames from "classnames";
-import React from 'react'
+import styles from './Title.module.css'
 
-
-interface Props {
-    children?: ReactNode;
-    textAlign?: 'left' | 'center' | 'right'
-
-}
-
-const Title: FC<Props> = ({children, textAlign = 'left'}) => {
+const Title = ({children}) => {
     return (
         <div>
-            <h2 className={styles.wrapper}>{children}</h2>
+            <h2 className={classNames(styles.title)}>
+                {children}
+            </h2>
         </div>
     );
 };
-
 
 export default Title;

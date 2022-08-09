@@ -1,0 +1,14 @@
+.container {
+    display: grid;
+    justify-content: center;
+}
+.buttonsBlock {
+    width: 820px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    margin-top: 15px;
+}
+.button {
+    width: 250px;
+}

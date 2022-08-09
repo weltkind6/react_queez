@@ -1,0 +1,11 @@
+.container {
+    display: grid;
+    justify-items: center;
+    font-size: 18px;
+}
+.buttonsBlock {
+    display: flex;
+    justify-content: space-evenly;
+    width: 280px;
+    margin-top: 30px;
+}
