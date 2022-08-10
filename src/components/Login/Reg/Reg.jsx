@@ -1,38 +1,22 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Link} from "react-router-dom";
 import './Reg.css'
 
 const Reg = () => {
-    return (
 
+    return (
         <div>
             <div className="d-flex justify-content-center align-items-center mt-5">
                 <div className="card">
                     <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                        <li className="nav-item text-center">
+                        <li className="nav-item text-center login">
                             <Link to='/login'>
-                                <a
-                                    className="nav-link active btl"
-                                    id="pills-home-tab"
-                                    data-toggle="pill"
-                                    role="tab"
-                                    aria-controls="pills-home"
-                                    aria-selected="true">
-                                    Login
-                                </a>
+                                <div className="login">Login</div>
                             </Link>
                         </li>
                         <li className="nav-item text-center">
                             <Link to='/registration'>
-                                <a
-                                    className="nav-link btr"
-                                    id="pills-profile-tab"
-                                    data-toggle="pill"
-                                    role="tab"
-                                    aria-controls="pills-profile"
-                                    aria-selected="false">
-                                    Signup
-                                </a>
+                                <div className="signUp">Sign Up!</div>
                             </Link>
                         </li>
 

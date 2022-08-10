@@ -1,3 +1,7 @@
+.btn2 {
+    color: #05e8ba;
+    font-size: 33px;
+}
 
 .btr {
     border-top-right-radius: 5px !important;
@@ -14,8 +18,13 @@
     border-color: #0d6efd;
 }
 
+.login {
+    color: #fff;
+}
 
-
+.signUp {
+    color: #FFFFFF;
+}
 
 
 .nav-pills .nav-link {
@@ -27,6 +36,15 @@
 .nav-item {
     display: table-cell;
     background: #0d6efd2e;
+    height: 40px;
+}
+
+.nav-item:first-child {
+    background: #0d6efd2e;
+    color: #FFFFFF;
+}
+.nav-item:last-child {
+    background: #0d6efd;
 }
 
 

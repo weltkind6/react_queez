@@ -45,6 +45,17 @@ body {
     background: #0d6efd2e;
 }
 
+.secondItem {
+   background: #0d6efd !important;
+}
+
+.signUp {
+    background: #0d6efd2e !important;
+}
+.login {
+    margin-top: 8px;
+}
+
 
 .form {
     padding: 10px;
@@ -52,14 +63,12 @@ body {
 }
 
 .form input {
-
     margin-bottom: 12px;
     border-radius: 3px;
 }
 
 
 .form input:focus {
-
     box-shadow: none;
 }
 
