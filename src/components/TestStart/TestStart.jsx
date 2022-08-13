@@ -17,8 +17,8 @@ const TestStart = () => {
                 <div>Примерное время выполнения: 30 минут</div>
                 <div>Ограничение на выполнение: 60 минут</div>
             </div>
-            <Link to="question1">
-                <Button color="primary">Старт</Button>
+            <Link to="1">
+                <Button color="primary">Start</Button>
             </Link>
         </div>
     );

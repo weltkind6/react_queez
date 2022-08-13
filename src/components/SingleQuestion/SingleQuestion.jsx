@@ -1,19 +1,35 @@
-import React from 'react';
-import {Button} from "reactstrap";
+import React, {useState} from 'react';
+import {Button, Input, InputGroup} from "reactstrap";
 import {Link} from "react-router-dom";
 
-const SingleQuestion = ({id, title, question, index, path}) => {
+const SingleQuestion = ({question, answer, index}) => {
+
+    const [yourAnswer, setYourAnswer] = useState('')
+    const [correctAnswers, setCorrectAnswer] = useState(0)
+    const submitAnswerHandler = () => {
+        if(yourAnswer === answer) {
+            setCorrectAnswer(correctAnswers + 1)
+        }
+    }
 
     return (
         <div>
-            <h2>Single question</h2>
-            <h3>{title}</h3>
-            <h4>{question}</h4>
-            <Link to={`/question` + `${index + 2}`}>
-                <Button color="info">Пропустить</Button>
+            <h4>{index + 1}. {question}</h4>
+            <div>Answer: <h5>{answer}</h5></div>
+            <InputGroup>
+                <Input placeholder="Enter your answer" onChange={e => setYourAnswer(e.target.value)}/>
+                <Link to={`/${index + 2}`}>
+                    <Button onClick={submitAnswerHandler}>Submit</Button>
+                </Link>
+            </InputGroup>
+            <div>
+                <h5>Correct answers <strong>{correctAnswers}</strong></h5>
+            </div>
+            <Link to={`/${index + 2}`}>
+                <Button color="info">Skip</Button>
             </Link>
             <Link to="/results">
-                <Button color="warning">Результат</Button>
+                <Button color="warning">Show result</Button>
             </Link>
         </div>
     );
