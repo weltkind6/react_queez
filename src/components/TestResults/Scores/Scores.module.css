@@ -3,24 +3,20 @@
 }
 
 .totalScore {
-    font-size: 50px;
+    font-size: 70px;
     font-weight: 600;
     letter-spacing: 4px;
     margin-left: 5px;
 }
 
-.triangle {
-
-}
 
 .points {
     font-weight: 500;
 }
-.scoreBlock {
 
-}
 .scoresPoints {
     text-align: center;
+    font-size: 32px;
 }
 .cards {
     display: flex;
@@ -29,8 +25,7 @@
     flex-direction: column;
 }
 .indicators {
-    display: flex;
-    flex-direction: column;
+   display: none;
 }
 
 .item {

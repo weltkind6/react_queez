@@ -11,7 +11,7 @@ import SingleQuestion from "../components/SingleQuestion/SingleQuestion";
 
 
 const AllRoutes = ({questions}) => {
-    console.log(questions)
+
     return (
         <div>
             <Routes>
@@ -20,7 +20,7 @@ const AllRoutes = ({questions}) => {
                 <Route path="registration" element={<Reg/>}/>
                 <Route path="/" element={<TestStart/>}/>
                 {questions.map(({id, question, answer}, index) =>
-                    <Route
+                    <Route key={id}
                         path={`${index + 1}`}
                         element={
                             <SingleQuestion
@@ -33,6 +33,7 @@ const AllRoutes = ({questions}) => {
                 }
                 <Route path="complete" element={<TestComplete/>}/>
                 <Route path="results" element={<TestResults/>}/>
+                <Route path="/11" element={<TestResults/>}/>
                 <Route path="*" element={<PageNotFound/>}/>
             </Routes>
         </div>

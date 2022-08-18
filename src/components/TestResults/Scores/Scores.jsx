@@ -1,15 +1,16 @@
 import React from 'react';
 import styles from './Scores.module.css'
-import {IoTriangle} from "react-icons/io5";
+import {useSelector} from "react-redux";
 
 const Scores = () => {
+    const scores = useSelector(state => state.answers)
+
     return (
         <div className={styles.wrapper}>
             <div className={styles.scoresPoints}>
-                <span className={styles.totalScore}>133</span>
-                <span className={styles.points}>балла</span></div>
-            <div className={styles.scoreBlock}>
-                <IoTriangle className={styles.triangle} color="#26f596"/>
+                <span className={styles.totalScore}>{scores}</span>
+                <span className={styles.points}>points</span></div>
+            <div>
                 <div className={styles.cards}>
                     <div className={styles.item}>очень низкий</div>
                     <div className={styles.item}>низкий</div>
@@ -19,10 +20,10 @@ const Scores = () => {
                 </div>
                 <div className={styles.indicators}>
                     <span>min</span>
-                    <span>85</span>
-                    <span>100</span>
-                    <span>120</span>
-                    <span>140</span>
+                    <span>3</span>
+                    <span>5</span>
+                    <span>7</span>
+                    <span>9</span>
                     <span>max</span>
                 </div>
             </div>
