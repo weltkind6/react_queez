@@ -6,6 +6,7 @@ import {useSelector} from "react-redux";
 
 const TestResults = () => {
     const results = useSelector(state => state.answers)
+    const usedHints = useSelector(state => state.hintsCount)
     const progress = results + '0'
     const progressWidth = (progress + '%').toString()
     const progressStyles = {
@@ -21,7 +22,7 @@ const TestResults = () => {
                         <div style={{fontSize: '20px'}}>Skipped questions:</div>
                         <div style={{fontSize: '32px', margin: '0 20px'}}>{skippedQuestions}</div>
                         <div style={{fontSize: '20px'}}>Used hints:</div>
-                        <div style={{fontSize: '32px', margin: '0 20px'}}>100</div>
+                        <div style={{fontSize: '32px', margin: '0 20px'}}>{usedHints}</div>
                     </div>
                     <Scores/>
                     <div className="progress">

@@ -1,15 +1,14 @@
-body {
-    background-color: #000;
+.wrapper {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    border: none;
 }
-
 
 .card {
     width: 400px;
     border: none;
 }
-
-
-
 
 .btl {
     border-top-left-radius: 5px !important;
@@ -17,14 +16,14 @@ body {
 
 .btn-dark {
     color: #fff;
-    background-color: #0d6efd;
+    background-color: lightgreen;
     border-color: #0d6efd;
 }
 
 
 .btn-dark:hover {
     color: #fff;
-    background-color: #0d6efd;
+    background-color: lightgreen;
     border-color: #0d6efd;
 }
 
@@ -40,18 +39,16 @@ body {
 
 }
 
-.nav-item {
-    display: table-cell;
-    background: #0d6efd2e;
-}
+
 
 .secondItem {
-   background: #0d6efd !important;
+    background: #0d6efd !important;
 }
 
 .signUp {
     background: #0d6efd2e !important;
 }
+
 .login {
     margin-top: 8px;
 }

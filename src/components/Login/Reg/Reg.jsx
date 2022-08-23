@@ -1,8 +1,25 @@
 import React, {useState} from 'react';
 import {Link} from "react-router-dom";
 import './Reg.css'
+import {getAuth, createUserWithEmailAndPassword} from "firebase/auth";
 
 const Reg = () => {
+    const [email, setEmail] = useState('')
+    const [pass, setPass] = useState('')
+    const registrationHandler = (email, password) => {
+        const auth = getAuth();
+        createUserWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                // Signed in
+                const user = userCredential.user;
+                // ...
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                // ..
+            });
+    }
 
     return (
         <div>
@@ -22,11 +39,25 @@ const Reg = () => {
 
                     </ul>
                     <div className="form px-4">
-                        <input type="text" name="" className="form-control" placeholder="Name"/>
-                        <input type="text" name="" className="form-control" placeholder="Email"/>
-                        <input type="text" name="" className="form-control" placeholder="Phone"/>
-                        <input type="text" name="" className="form-control" placeholder="Password"/>
-                        <button className="btn btn-dark btn-block">Signup</button>
+                        <input
+                            type="email"
+                            value={email}
+                            name=""
+                            className="form-control"
+                            placeholder="Email"
+                            onChange={e => setEmail(e.target.value)}/>
+                        <input
+                            type="password"
+                            value={pass}
+                            name=""
+                            className="form-control"
+                            placeholder="Password"
+                            onChange={e => setPass(e.target.value)}
+                        />
+                        <button
+                            className="btn btn-dark btn-block"
+                            onClick={() => registrationHandler(email, pass)}
+                        >Signup</button>
                     </div>
 
                     <div className="tab-content" id="pills-tabContent">

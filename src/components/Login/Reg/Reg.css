@@ -1,3 +1,7 @@
+.wrapper {
+    background-image: url("https://catherineasquithgallery.com/uploads/posts/2021-02/1612645510_58-p-zelenii-fon-zelen-73.jpg");
+}
+
 .btn2 {
     color: #05e8ba;
     font-size: 33px;
@@ -43,6 +47,7 @@
     background: #0d6efd2e;
     color: #FFFFFF;
 }
+
 .nav-item:last-child {
     background: #0d6efd;
 }
