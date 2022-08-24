@@ -1,7 +1,7 @@
 import {
     ADD_CORRECT_ANSWER,
     HINTS_COUNT,
-    IS_ANSWER_BUTTON_CLICKED,
+    IS_ANSWER_BUTTON_CLICKED, IS_COUNTER_RESET, IS_COUNTER_SECONDS_RESET,
     QUESTION_VISIBLE,
     SKIP_QUESTION
 } from "./types";
@@ -12,7 +12,9 @@ const initialState = {
     isAnswerVisible: false,
     hintsCount: 0,
     isAnswerButtonClicked: false,
-    user: ''
+    user: '',
+    timerCounter: 0,
+    secondsCounter: 0
 }
 
 export const reducer = (state = initialState, action) => {
@@ -37,6 +39,14 @@ export const reducer = (state = initialState, action) => {
         case IS_ANSWER_BUTTON_CLICKED:
             return {
                 ...state, isAnswerButtonClicked: payload
+            }
+        case IS_COUNTER_RESET:
+            return {
+                ...state, timerCounter: payload
+            }
+        case IS_COUNTER_SECONDS_RESET:
+            return {
+                ...state, secondsCounter: payload
             }
         default: return state
     }

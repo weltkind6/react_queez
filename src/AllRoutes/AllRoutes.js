@@ -8,6 +8,7 @@ import Reg from "../components/Login/Reg/Reg";
 import TestResults from "../components/TestResults/TestResults";
 import Question from "../components/ui/Question/Question";
 import SingleQuestion from "../components/SingleQuestion/SingleQuestion";
+import Timer from "../components/Timer/Timer";
 
 
 const AllRoutes = ({questions}) => {
@@ -34,6 +35,7 @@ const AllRoutes = ({questions}) => {
                 <Route path="complete" element={<TestComplete/>}/>
                 <Route path="results" element={<TestResults/>}/>
                 <Route path="/11" element={<TestResults/>}/>
+                <Route path="/timer" element={<Timer/>}/>
                 <Route path="*" element={<PageNotFound/>}/>
             </Routes>
         </div>

@@ -24,12 +24,6 @@ const CandidateAbout = () => {
                             <MdDoneOutline/> Restart
                         </Button>
                     </Link>
-                    <Button color="primary" className={styles.button}>
-                        <BsFillPersonFill/> В резерв
-                    </Button>
-                    <Button color="danger" className={styles.button}>
-                        <ImCross/> Отказать
-                    </Button>
                 </div>
             </div>
         </div>

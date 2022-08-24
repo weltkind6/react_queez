@@ -1,11 +1,21 @@
-.questionBlock {
-
-}
 .buttonsBlock {
     display: flex;
     justify-content: space-between;
     margin-top: 25px;
 }
-.answer {
 
+@media (max-width: 768px) {
+    .buttonsBlock {
+        display: grid;
+        grid-gap: 15px;
+        justify-content: center;
+    }
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    margin-top: 250px;
+    font-size: 32px;
+    color: #FFFFFF;
 }

@@ -24,9 +24,6 @@
     align-items: center;
     flex-direction: column;
 }
-.indicators {
-   display: none;
-}
 
 .item {
     padding: .5em;
@@ -90,29 +87,9 @@
         transform: rotate(180deg);
         margin-left: 585px;
     }
-    .indicators {
-        display: flex;
-        flex-direction: row;
-        margin: 0 5px;
-    }
     .item {
         width: 150px;
         margin: 8px 4px;
-    }
-    .indicators > span:first-child {
-        margin-right: 118px;
-    }
-    .indicators > span:nth-child(2) {
-        margin-right: 133px;
-    }
-    .indicators > span:nth-child(3) {
-        margin-right: 131px;
-    }
-    .indicators > span:nth-child(4) {
-        margin-right: 135px;
-    }
-    .indicators > span:nth-child(5) {
-        margin-right: 110px;
     }
 }
 

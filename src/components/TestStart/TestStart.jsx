@@ -8,14 +8,10 @@ import Title from "../ui/TItle/Title";
 const TestStart = () => {
     return (
         <div className={styles.wrapper}>
-            <Title children="Личностный тест"/>
-            <p> Этот тест спроверит ваши личностыне качества. В нём могут встретиться противоречивые вопросы, отвечайте
-                так,
-                как считаете нужным. Ответы на вопросы не сохраняются, мы сохраним только выводы.</p>
+            <Title children="A very difficult test"/>
             <div className={styles.conditions}>
-                <div>Количество вопросов: 200</div>
-                <div>Примерное время выполнения: 30 минут</div>
-                <div>Ограничение на выполнение: 60 минут</div>
+                <div>Questions count: 10</div>
+                <div>Approximate execution time: 30 min</div>
             </div>
             <Link to="1">
                 <Button color="primary">Start</Button>

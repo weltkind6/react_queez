@@ -6,10 +6,19 @@ import axios from "axios";
 
 function App() {
     const [questions, setQuestions] = useState([])
-    useEffect(async () => {
-        const apiUrl = 'https://jservice.io/api/random?count=10'
-        const res = await  axios.get(apiUrl).then(response => response.data)
-        setQuestions(res)
+    const getQuestionsHandler = async () => {
+        try {
+            const apiUrl = 'https://jservice.io/api/random?count=10'
+            const res = await axios.get(apiUrl).then(response => response.data)
+            setQuestions(res)
+        }
+        catch (error) {
+            console.log(error)
+        }
+    }
+    useEffect( () => {
+        getQuestionsHandler()
+
     }, [])
 
     return (

@@ -4,6 +4,7 @@ import {useSelector} from "react-redux";
 
 const Scores = () => {
     const scores = useSelector(state => state.answers)
+    console.log('scores', scores)
 
     return (
         <div className={styles.wrapper}>
@@ -12,19 +13,12 @@ const Scores = () => {
                 <span className={styles.points}>points</span></div>
             <div>
                 <div className={styles.cards}>
-                    <div className={styles.item}>очень низкий</div>
-                    <div className={styles.item}>низкий</div>
-                    <div className={styles.item}>средний</div>
-                    <div className={styles.item}>высокий</div>
-                    <div className={styles.item}>очень высокий</div>
-                </div>
-                <div className={styles.indicators}>
-                    <span>min</span>
-                    <span>3</span>
-                    <span>5</span>
-                    <span>7</span>
-                    <span>9</span>
-                    <span>max</span>
+                    {scores === 0 || scores === 1 ? <div className={styles.item}>Very low</div> : null}
+                    {scores === 2 || scores === 3 ? <div className={styles.item}>Low</div> : null}
+                    {scores === 4 || scores === 5 ? <div className={styles.item}>Low</div> : null}
+                    {scores === 6 || scores === 7 ? <div className={styles.item}>Middle</div> : null}
+                    {scores === 8 || scores === 9 ? <div className={styles.item}>Height</div> : null}
+                    {scores === 10 ? <div className={styles.item}>Very height</div> : null}
                 </div>
             </div>
         </div>
