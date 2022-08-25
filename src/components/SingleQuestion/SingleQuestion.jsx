@@ -49,6 +49,7 @@ const SingleQuestion = ({question, answer, index}) => {
     const reduxMinutes = useSelector(state => state.timerCounter)
     const reduxSeconds = useSelector(state => state.secondsCounter)
 
+
     return (
         <div>
             {reduxMinutes === 0 && reduxSeconds === 0 ? <TestResults /> : (

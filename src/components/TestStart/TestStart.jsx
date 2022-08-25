@@ -11,7 +11,7 @@ const TestStart = () => {
             <Title children="A very difficult test"/>
             <div className={styles.conditions}>
                 <div>Questions count: 10</div>
-                <div>Approximate execution time: 30 min</div>
+                <div>Approximate execution time: 10 min</div>
             </div>
             <Link to="1">
                 <Button color="primary">Start</Button>

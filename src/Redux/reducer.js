@@ -3,7 +3,7 @@ import {
     HINTS_COUNT,
     IS_ANSWER_BUTTON_CLICKED, IS_COUNTER_RESET, IS_COUNTER_SECONDS_RESET,
     QUESTION_VISIBLE,
-    SKIP_QUESTION
+    SKIP_QUESTION, TOTAL_COUNTER_SECONDS
 } from "./types";
 
 const initialState = {
@@ -13,8 +13,8 @@ const initialState = {
     hintsCount: 0,
     isAnswerButtonClicked: false,
     user: '',
-    timerCounter: 0,
-    secondsCounter: 0
+    minutesCounter: 0,
+    secondsCounter: 0,
 }
 
 export const reducer = (state = initialState, action) => {
