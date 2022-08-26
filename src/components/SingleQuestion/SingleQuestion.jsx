@@ -31,8 +31,7 @@ const SingleQuestion = ({question, answer, index}) => {
         dispatch({type: QUESTION_VISIBLE, payload: false})
     }
     const onPressEnter = e => {
-        // ?why it doesn't work
-        if (e.code === 'Enter') {
+        if (e.key === 'Enter') {
             submitAnswerHandler()
         }
     }
